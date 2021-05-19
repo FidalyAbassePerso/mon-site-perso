@@ -86,11 +86,9 @@ class ExpProfessionnel extends React.Component {
 
                         </Container>
                         <Container className={this.props.classes.blocExpText} style={{width: this.state.widthBlocExpText}} maxWidth="false">
-                            <p>Ultima Syriarum est Palaestina per intervalla magna protenta, 
-                                cultis abundans terris et nitidis et civitates habens quasdam egregias, 
-                                nullam nulli cedentem sed sibi vicissim velut ad perpendiculum aemulas: 
-                                Caesaream, quam ad honorem Octaviani principis exaedificavit Herodes, et 
-                                Eleutheropolim et Neapolim itidemque Ascalonem Gazam aevo superiore exstructas.</p>
+                            <p>Développeur full stack au sein de l'INSEE. J'ai intégré le domaine secrétariat général et ai participé
+                                au développement et à la maintenance des applications du domaines.J'ai pu travailler et monter en compétence 
+                                sur les technologies Springs et notamment quelques frameworks Javascript tel que ReactJS et Jquery.</p>
 
                         </Container>
                         <Container className={this.props.classes.techList} style={{width: this.state.widthBlocExpText}} maxWidth="false">
@@ -125,11 +123,8 @@ class ExpProfessionnel extends React.Component {
                             </AppBar>
                         </Container>
                         <Container className={this.props.classes.blocExpText} style={{width: this.state.widthBlocExpText}} maxWidth="false">
-                            <p>Ultima Syriarum est Palaestina per intervalla magna protenta, 
-                                cultis abundans terris et nitidis et civitates habens quasdam egregias, 
-                                nullam nulli cedentem sed sibi vicissim velut ad perpendiculum aemulas: 
-                                Caesaream, quam ad honorem Octaviani principis exaedificavit Herodes, et 
-                                Eleutheropolim et Neapolim itidemque Ascalonem Gazam aevo superiore exstructas.</p>
+                            <p>En tant qu'adjoint administratif au sein de l'OFRPA j'avais pour mission de traiter les demandes et décisions
+                                des demandeurs d'asiles. J'y ai pu améliorer mon organisation et enrichir mes capacité de rédaction.</p>
 
                         </Container>
                         <Container className={this.props.classes.techList} style={{width: this.state.widthBlocExpText}} maxWidth="false">
@@ -152,11 +147,10 @@ class ExpProfessionnel extends React.Component {
                             </AppBar>
                         </Container>
                         <Container className={this.props.classes.blocExpText} style={{width: this.state.widthBlocExpText}} maxWidth="false">
-                            <p>Ultima Syriarum est Palaestina per intervalla magna protenta, 
-                                cultis abundans terris et nitidis et civitates habens quasdam egregias, 
-                                nullam nulli cedentem sed sibi vicissim velut ad perpendiculum aemulas: 
-                                Caesaream, quam ad honorem Octaviani principis exaedificavit Herodes, et 
-                                Eleutheropolim et Neapolim itidemque Ascalonem Gazam aevo superiore exstructas.</p>
+                            <p>Lors de ma première expérience professionnel dans le monde du développement web à l'OPTAE en tant que développeur web 
+                                JEE,j'ai eu l'occasion de monter en compétence sur des frameworks tels que Struts2,Maven, Hibernate. J'avais 
+                                pour mission de coder une application JAVA from scratch, mais également la maintenance d'une application 
+                                dans laquelle j'ai pu monter en compétence sur AngularJS.</p>
 
                         </Container>
                         <Container className={this.props.classes.techList} style={{width: this.state.widthBlocExpText}} maxWidth="false">
