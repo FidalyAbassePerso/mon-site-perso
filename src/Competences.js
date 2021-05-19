@@ -48,7 +48,7 @@ class Competences extends React.Component {
             widthBar = "70vw"; 
             labelWidth = "80vw"
         }
-        else if (window.innerWidth <= 355) {
+        if (window.innerWidth <= 355) {
             marginBar = "8vw";
         }
         this.setState({widthBar,labelWidth,marginBar});

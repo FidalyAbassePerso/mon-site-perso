@@ -56,7 +56,7 @@ class Acceuil extends React.Component {
             widthBlocExp = "96vw"; 
             widthButtonDownload = "74vw";
         }
-        if (window.innerWidth <= 504) {
+        else if (window.innerWidth <= 504) {
             widthButtonDownload = "62vw";
         }
         if (window.innerWidth <= 355) {
