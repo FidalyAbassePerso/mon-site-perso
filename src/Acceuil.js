@@ -12,8 +12,8 @@ const styles = {
     root: {
         margin: 0,
         padding: 0,
-        paddingLeft: "1vw",
-        paddingRight: "1vw"
+        paddingLeft: "6px",
+        paddingRight: "6px"
         //width: "80vw",
         //backgroundColor: "#3240a8"
     },
@@ -58,6 +58,9 @@ class Acceuil extends React.Component {
         }
         if (window.innerWidth <= 504) {
             widthButtonDownload = "62vw";
+        }
+        if (window.innerWidth <= 355) {
+            widthButtonDownload = "42vw";
         }
         else if (window.innerWidth > 1172){
             widthBlocExp = "78vw"; 
