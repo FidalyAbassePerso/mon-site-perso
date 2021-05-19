@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/mon-site-perso/static/css/main.e04ec153.chunk.css",
+    "main.js": "/mon-site-perso/static/js/main.efbeccb1.chunk.js",
+    "main.js.map": "/mon-site-perso/static/js/main.efbeccb1.chunk.js.map",
+    "runtime-main.js": "/mon-site-perso/static/js/runtime-main.568b4efc.js",
+    "runtime-main.js.map": "/mon-site-perso/static/js/runtime-main.568b4efc.js.map",
+    "static/js/2.592fbfbb.chunk.js": "/mon-site-perso/static/js/2.592fbfbb.chunk.js",
+    "static/js/2.592fbfbb.chunk.js.map": "/mon-site-perso/static/js/2.592fbfbb.chunk.js.map",
+    "static/js/3.14a07144.chunk.js": "/mon-site-perso/static/js/3.14a07144.chunk.js",
+    "static/js/3.14a07144.chunk.js.map": "/mon-site-perso/static/js/3.14a07144.chunk.js.map",
+    "index.html": "/mon-site-perso/index.html",
+    "static/css/main.e04ec153.chunk.css.map": "/mon-site-perso/static/css/main.e04ec153.chunk.css.map",
+    "static/js/2.592fbfbb.chunk.js.LICENSE.txt": "/mon-site-perso/static/js/2.592fbfbb.chunk.js.LICENSE.txt",
+    "static/media/AbasseLogo.8ee32f20.png": "/mon-site-perso/static/media/AbasseLogo.8ee32f20.png",
+    "static/media/CV_FIDALY_ABASSE.a04f53ff.pdf": "/mon-site-perso/static/media/CV_FIDALY_ABASSE.a04f53ff.pdf",
+    "static/media/logo.6ce24c58.svg": "/mon-site-perso/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.568b4efc.js",
+    "static/js/2.592fbfbb.chunk.js",
+    "static/css/main.e04ec153.chunk.css",
+    "static/js/main.efbeccb1.chunk.js"
+  ]
+}
