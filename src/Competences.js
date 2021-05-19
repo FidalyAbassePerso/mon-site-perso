@@ -18,7 +18,6 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 const styles = {
     barProgress: {
         borderRadius: 5,
-        marginLeft: "6vw",
         height: 10,
     },
     root: {
@@ -33,12 +32,13 @@ const styles = {
 class Competences extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {widthBar: "70vw",labelWidth: "80vw"};
+      this.state = {widthBar: "70vw",labelWidth: "80vw", marginBar: "6vw"};
       
     }
 
     updateComponentSize = () =>{
         let widthBar = this.state.widthBar;
+        let marginBar = this.state.marginBar;
         let labelWidth = this.state.labelWidth;
         if (window.innerWidth < 1172) {
             widthBar = "88vw"; 
@@ -48,7 +48,10 @@ class Competences extends React.Component {
             widthBar = "70vw"; 
             labelWidth = "80vw"
         }
-        this.setState({widthBar,labelWidth});
+        else if (window.innerWidth <= 355) {
+            marginBar = "8vw";
+        }
+        this.setState({widthBar,labelWidth,marginBar});
     }
 
     componentDidMount() {
@@ -62,6 +65,7 @@ class Competences extends React.Component {
     
     render() {
         var barLabelWidth = this.state.labelWidth;
+        var marginBar = this.state.marginBar;
         return (
             <div>
                 
@@ -72,7 +76,7 @@ class Competences extends React.Component {
                             <Typography style={{width: barLabelWidth}}>Technologies Spring (SpringMVC, SpringBatch, SpringRest, SpringBoot) </Typography>
                         </Grid>
                         <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar}} variant="determinate" value={70} />
+                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={70} />
                         </Grid>
                     </div>
                     
@@ -81,7 +85,7 @@ class Competences extends React.Component {
                             <Typography style={{width: barLabelWidth}}>Strusts2 </Typography>
                         </Grid>
                         <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar}} variant="determinate" value={70} />
+                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={70} />
                         </Grid>
                     </div>
                     
@@ -90,7 +94,7 @@ class Competences extends React.Component {
                             <Typography style={{width: barLabelWidth}}>ReactJs </Typography>
                         </Grid>
                         <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar}} variant="determinate" value={40} />
+                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={40} />
                         </Grid>
                     </div>
                     
@@ -99,7 +103,7 @@ class Competences extends React.Component {
                             <Typography style={{width: barLabelWidth}}>JQuery</Typography>
                         </Grid>
                         <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar}} variant="determinate" value={60} />
+                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={60} />
                         </Grid>
                     </div>
                     
@@ -109,7 +113,7 @@ class Competences extends React.Component {
                             <Typography style={{width: barLabelWidth}}>Maven</Typography>
                         </Grid>
                         <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar}} variant="determinate" value={60} />
+                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={60} />
                         </Grid>
                     </div>
                     
@@ -119,7 +123,7 @@ class Competences extends React.Component {
                             <Typography style={{width: barLabelWidth}}>Hibernate</Typography>
                         </Grid>
                         <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar}} variant="determinate" value={60} />
+                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={60} />
                         </Grid>
                     </div>
                     
@@ -129,7 +133,7 @@ class Competences extends React.Component {
                             <Typography style={{width: barLabelWidth}}>PostGreSql</Typography>
                         </Grid>
                         <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar}} variant="determinate" value={70} />
+                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={70} />
                         </Grid>
                     </div>
                     
