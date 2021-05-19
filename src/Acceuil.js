@@ -45,7 +45,10 @@ const styles = {
 class Acceuil extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {widthBlocExp: "78vw", widthBlocExpText: "80vw", heightBloc: "33vh",widthButtonDownload: "62vw"};
+      this.state = {
+          widthBlocExp: window.innerWidth < 1172 ?  "96vw" : "78vw", 
+          widthButtonDownload: window.innerWidth <= 355 ? "42vw" :"62vw"
+        };
       
     }
 
@@ -56,23 +59,20 @@ class Acceuil extends React.Component {
             widthBlocExp = "96vw"; 
             widthButtonDownload = "74vw";
         }
-        else if (window.innerWidth <= 504) {
+        if (window.innerWidth <= 504) {
             widthButtonDownload = "62vw";
         }
         if (window.innerWidth <= 355) {
             widthButtonDownload = "42vw";
         }
-        else if (window.innerWidth > 1172){
+        if (window.innerWidth > 1172){
             widthBlocExp = "78vw"; 
             widthButtonDownload = "62vw";
         }
-        let widthBlocExpText = widthBlocExp;
-        let heightBloc = window.innerHeight < 554 ? "40vh" : this.state.heightBloc;
-        this.setState({widthBlocExp,widthBlocExpText,heightBloc,widthButtonDownload});
+        this.setState({widthBlocExp,widthButtonDownload});
     }
 
     componentDidMount() {
-        this.updateComponentSize();
         window.addEventListener("resize", this.updateComponentSize);
     }
 

@@ -32,7 +32,10 @@ const styles = {
 class Competences extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {widthBar: "70vw",labelWidth: "80vw", marginBar: "6vw"};
+      this.state = {widthBar: window.innerWidth < 1172 ? "88vw": "70vw",
+                    labelWidth: window.innerWidth < 1172 ? "98vw":"80vw", 
+                    marginBar: window.innerWidth <= 355 ? "8vw" : "6vw"
+                };
       
     }
 
@@ -55,7 +58,6 @@ class Competences extends React.Component {
     }
 
     componentDidMount() {
-        this.updateComponentSize();
         window.addEventListener("resize", this.updateComponentSize);
     }
 
