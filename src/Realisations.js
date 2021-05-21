@@ -10,6 +10,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import PublicIcon from '@material-ui/icons/Public';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import Slide from '@material-ui/core/Slide';
+
 
 
 const styles = {
@@ -55,7 +57,7 @@ class Realisations extends React.Component {
 
     updateComponentSize = () =>{
         let widthBlocExp = this.state.widthBlocExp;
-        if (window.innerWidth < 1172) {
+        if (window.innerWidth < 1172 || window.innerHeight < 539) {
             widthBlocExp = "98vw"; 
         }
         else if (window.innerWidth > 1172){
@@ -78,101 +80,103 @@ class Realisations extends React.Component {
     render() {
         return (
             <div>
-                <Grid container spacing={3}>
-                    <Grid item xs={12} className={this.props.classes.bloc} style={{height: this.state.heightBloc}}>
-                        <Container className={this.props.classes.blocExp} style={{width: this.state.widthBlocExp}} maxWidth="false">
-                            <AppBar position="static">
-                                <Toolbar variant="dense">
-                                    <IconButton edge="start" className={this.props.classes.menuButton} color="inherit" aria-label="menu">
-                                        <ComputerIcon />
-                                    </IconButton>
-                                    <Typography variant="h6" color="inherit">
-                                        Mon site web portfolio
-                                    </Typography>
-                                    <div className={this.props.classes.emptySpace}></div>
-                                    <IconButton href="https://github.com/FidalyAbassePerso/mon-site-perso" edge="start" color="inherit" aria-label="menu">
-                                        <GitHubIcon className={this.props.classes.downloadButton}/>
-                                    </IconButton>
-                                    <IconButton href="https://fidalyabasseperso.github.io/mon-site-perso/" edge="start" color="inherit" aria-label="menu">
-                                        <PublicIcon />
-                                    </IconButton>
-                                </Toolbar>
-                            </AppBar>
+                <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                    <Grid container spacing={3}>
+                        <Grid item xs={12} className={this.props.classes.bloc} style={{height: this.state.heightBloc}}>
+                            <Container className={this.props.classes.blocExp} style={{width: this.state.widthBlocExp}} maxWidth="false">
+                                <AppBar position="static">
+                                    <Toolbar variant="dense">
+                                        <IconButton edge="start" className={this.props.classes.menuButton} color="inherit" aria-label="menu">
+                                            <ComputerIcon />
+                                        </IconButton>
+                                        <Typography variant="h6" color="inherit">
+                                            Mon site web portfolio
+                                        </Typography>
+                                        <div className={this.props.classes.emptySpace}></div>
+                                        <IconButton href="https://github.com/FidalyAbassePerso/mon-site-perso" edge="start" color="inherit" aria-label="menu">
+                                            <GitHubIcon className={this.props.classes.downloadButton}/>
+                                        </IconButton>
+                                        <IconButton href="https://fidalyabasseperso.github.io/mon-site-perso/" edge="start" color="inherit" aria-label="menu">
+                                            <PublicIcon />
+                                        </IconButton>
+                                    </Toolbar>
+                                </AppBar>
 
-                        </Container>
-                        <Container className={this.props.classes.blocExpText} style={{width: this.state.widthBlocExpText}} maxWidth="false">
-                            <p>Réalisation de mon site web portfolio.</p>
-                        </Container>
-                        <Container className={this.props.classes.techList} style={{width: this.state.widthBlocExpText}} maxWidth="false">
-                            <Chip label="ReactJS"/>
-                            <Chip label="Javascript"/>
-                            <Chip label="Material-ui"/>
-                        </Container>
-                        
-
-                    </Grid>
-
-                    <Grid item xs={12} className={this.props.classes.bloc} style={{height: this.state.heightBloc}}>
-                        <Container className={this.props.classes.blocExp} style={{width: this.state.widthBlocExp}} maxWidth="false">
-                            <AppBar position="static">
-                                <Toolbar variant="dense">
-                                    <IconButton edge="start" className={this.props.classes.menuButton} color="inherit" aria-label="menu">
-                                        <ComputerIcon />
-                                    </IconButton>
-                                    <Typography variant="h6" color="inherit">
-                                        Site web dreamveloper
-                                    </Typography>
-                                    <div className={this.props.classes.emptySpace}></div>
-                                    <IconButton href="https://github.com/FidalyAbassePerso/site-dreamveloper" edge="start" color="inherit" aria-label="menu">
-                                        <GitHubIcon className={this.props.classes.downloadButton} />
-                                    </IconButton>
-                                    <IconButton href="https://dreamveloper-studio.com/" edge="start"  color="inherit" aria-label="menu">
-                                        <PublicIcon />
-                                    </IconButton>
-                                </Toolbar>
-                            </AppBar>
-                        </Container>
-                        <Container className={this.props.classes.blocExpText} style={{width: this.state.widthBlocExpText}} maxWidth="false">
-                            <p>Réalisation du site web dreamveloper-studio.com.</p>
-                    
-                        </Container>
-                        <Container className={this.props.classes.techList} style={{width: this.state.widthBlocExpText}} maxWidth="false">
-                            <Chip label="HTML/CSS"/>
-                            <Chip label="Bootstrap"/>
-                            <Chip label="Javascript"/>
-                        </Container>
-                    </Grid>
-
-                    <Grid item xs={12} className={this.props.classes.bloc} style={{height: this.state.heightBloc}}>
-                        <Container className={this.props.classes.blocExp} style={{width: this.state.widthBlocExp}} maxWidth="false">
-                            <AppBar position="static">
-                                <Toolbar variant="dense">
-                                    <IconButton edge="start" className={this.props.classes.menuButton} color="inherit" aria-label="menu">
-                                        <ComputerIcon />
-                                    </IconButton>
-                                    <Typography variant="h6" color="inherit">
-                                        Site web bloopy & droopy 
-                                    </Typography>
-                                    <div className={this.props.classes.emptySpace}></div>
-                                    <IconButton href="https://github.com/FidalyAbassePerso/site-bloopy" edge="start"  color="inherit" aria-label="menu">
-                                        <GitHubIcon className={this.props.classes.downloadButton}/>
-                                    </IconButton>
-                                    <IconButton href="https://dreamveloper-studio.com/Site%20Bloopy/index.html" edge="start"  color="inherit" aria-label="menu">
-                                        <PublicIcon />
-                                    </IconButton>
-                                </Toolbar>
-                            </AppBar>
-                        </Container>
-                        <Container className={this.props.classes.blocExpText} style={{width: this.state.widthBlocExpText}} maxWidth="false">
-                            <p>Réalisation du site web bloopy and droopy.</p>
+                            </Container>
+                            <Container className={this.props.classes.blocExpText} style={{width: this.state.widthBlocExpText}} maxWidth="false">
+                                <p>Réalisation de mon site web portfolio.</p>
+                            </Container>
+                            <Container className={this.props.classes.techList} style={{width: this.state.widthBlocExpText}} maxWidth="false">
+                                <Chip label="ReactJS"/>
+                                <Chip label="Javascript"/>
+                                <Chip label="Material-ui"/>
+                            </Container>
                             
-                        </Container>
-                        <Container className={this.props.classes.techList} style={{width: this.state.widthBlocExpText}} maxWidth="false">
-                            <Chip label="HTML/CSS"/>
-                            <Chip label="Bootstrap"/>
-                        </Container>
+
+                        </Grid>
+
+                        <Grid item xs={12} className={this.props.classes.bloc} style={{height: this.state.heightBloc}}>
+                            <Container className={this.props.classes.blocExp} style={{width: this.state.widthBlocExp}} maxWidth="false">
+                                <AppBar position="static">
+                                    <Toolbar variant="dense">
+                                        <IconButton edge="start" className={this.props.classes.menuButton} color="inherit" aria-label="menu">
+                                            <ComputerIcon />
+                                        </IconButton>
+                                        <Typography variant="h6" color="inherit">
+                                            Site web dreamveloper
+                                        </Typography>
+                                        <div className={this.props.classes.emptySpace}></div>
+                                        <IconButton href="https://github.com/FidalyAbassePerso/site-dreamveloper" edge="start" color="inherit" aria-label="menu">
+                                            <GitHubIcon className={this.props.classes.downloadButton} />
+                                        </IconButton>
+                                        <IconButton href="https://dreamveloper-studio.com/" edge="start"  color="inherit" aria-label="menu">
+                                            <PublicIcon />
+                                        </IconButton>
+                                    </Toolbar>
+                                </AppBar>
+                            </Container>
+                            <Container className={this.props.classes.blocExpText} style={{width: this.state.widthBlocExpText}} maxWidth="false">
+                                <p>Réalisation du site web dreamveloper-studio.com.</p>
+                        
+                            </Container>
+                            <Container className={this.props.classes.techList} style={{width: this.state.widthBlocExpText}} maxWidth="false">
+                                <Chip label="HTML/CSS"/>
+                                <Chip label="Bootstrap"/>
+                                <Chip label="Javascript"/>
+                            </Container>
+                        </Grid>
+
+                        <Grid item xs={12} className={this.props.classes.bloc} style={{height: this.state.heightBloc}}>
+                            <Container className={this.props.classes.blocExp} style={{width: this.state.widthBlocExp}} maxWidth="false">
+                                <AppBar position="static">
+                                    <Toolbar variant="dense">
+                                        <IconButton edge="start" className={this.props.classes.menuButton} color="inherit" aria-label="menu">
+                                            <ComputerIcon />
+                                        </IconButton>
+                                        <Typography variant="h6" color="inherit">
+                                            Site web bloopy & droopy 
+                                        </Typography>
+                                        <div className={this.props.classes.emptySpace}></div>
+                                        <IconButton href="https://github.com/FidalyAbassePerso/site-bloopy" edge="start"  color="inherit" aria-label="menu">
+                                            <GitHubIcon className={this.props.classes.downloadButton}/>
+                                        </IconButton>
+                                        <IconButton href="https://dreamveloper-studio.com/Site%20Bloopy/index.html" edge="start"  color="inherit" aria-label="menu">
+                                            <PublicIcon />
+                                        </IconButton>
+                                    </Toolbar>
+                                </AppBar>
+                            </Container>
+                            <Container className={this.props.classes.blocExpText} style={{width: this.state.widthBlocExpText}} maxWidth="false">
+                                <p>Réalisation du site web bloopy and droopy.</p>
+                                
+                            </Container>
+                            <Container className={this.props.classes.techList} style={{width: this.state.widthBlocExpText}} maxWidth="false">
+                                <Chip label="HTML/CSS"/>
+                                <Chip label="Bootstrap"/>
+                            </Container>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </Slide>
 
             </div>      
         

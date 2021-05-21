@@ -12,7 +12,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 const styles = {
     grow: {
         flexGrow: 1,
-        width: "100vw"
+        width: "98vw"
     },
     sectionDesktop: {
         display: "flex"

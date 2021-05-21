@@ -12,6 +12,8 @@ import PublicIcon from '@material-ui/icons/Public';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Box from '@material-ui/core/Box';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import Slide from '@material-ui/core/Slide';
+
 
 
 
@@ -32,8 +34,8 @@ const styles = {
 class Competences extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {widthBar: window.innerWidth < 1172 ? "88vw": "70vw",
-                    labelWidth: window.innerWidth < 1172 ? "98vw":"80vw", 
+      this.state = {widthBar: window.innerWidth < 1172 || window.innerHeight < 539 ? "88vw": "70vw",
+                    labelWidth: window.innerWidth < 1172 || window.innerHeight < 539 ? "98vw":"80vw", 
                     marginBar: window.innerWidth <= 355 ? "8vw" : "6vw"
                 };
       
@@ -43,7 +45,7 @@ class Competences extends React.Component {
         let widthBar = this.state.widthBar;
         let marginBar = this.state.marginBar;
         let labelWidth = this.state.labelWidth;
-        if (window.innerWidth < 1172) {
+        if (window.innerWidth < 1172 || window.innerHeight < 539) {
             widthBar = "88vw"; 
             labelWidth = "98vw"
         }
@@ -70,78 +72,79 @@ class Competences extends React.Component {
         var marginBar = this.state.marginBar;
         return (
             <div>
-                
-                <Grid container spacing={3} className={this.props.classes.root}>
+                <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                    <Grid container spacing={3} className={this.props.classes.root}>
 
-                    <div className={this.props.classes.bloc}>
-                        <Grid item xs={12}>
-                            <Typography style={{width: barLabelWidth}}>Technologies Spring (SpringMVC, SpringBatch, SpringRest, SpringBoot) </Typography>
-                        </Grid>
-                        <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={70} />
-                        </Grid>
-                    </div>
-                    
-                    <div className={this.props.classes.bloc}>
-                        <Grid item xs={12}>
-                            <Typography style={{width: barLabelWidth}}>Strusts2 </Typography>
-                        </Grid>
-                        <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={70} />
-                        </Grid>
-                    </div>
-                    
-                    <div className={this.props.classes.bloc}>
-                        <Grid item xs={12}>
-                            <Typography style={{width: barLabelWidth}}>ReactJs </Typography>
-                        </Grid>
-                        <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={40} />
-                        </Grid>
-                    </div>
-                    
-                    <div className={this.props.classes.bloc}>
-                        <Grid item xs={12}>
-                            <Typography style={{width: barLabelWidth}}>JQuery</Typography>
-                        </Grid>
-                        <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={60} />
-                        </Grid>
-                    </div>
-                    
+                        <div className={this.props.classes.bloc}>
+                            <Grid item xs={12}>
+                                <Typography style={{width: barLabelWidth}}>Technologies Spring (SpringMVC, SpringBatch, SpringRest, SpringBoot) </Typography>
+                            </Grid>
+                            <Grid item xs={6} >
+                                <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={70} />
+                            </Grid>
+                        </div>
+                        
+                        <div className={this.props.classes.bloc}>
+                            <Grid item xs={12}>
+                                <Typography style={{width: barLabelWidth}}>Strusts2 </Typography>
+                            </Grid>
+                            <Grid item xs={6} >
+                                <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={70} />
+                            </Grid>
+                        </div>
+                        
+                        <div className={this.props.classes.bloc}>
+                            <Grid item xs={12}>
+                                <Typography style={{width: barLabelWidth}}>ReactJs </Typography>
+                            </Grid>
+                            <Grid item xs={6} >
+                                <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={40} />
+                            </Grid>
+                        </div>
+                        
+                        <div className={this.props.classes.bloc}>
+                            <Grid item xs={12}>
+                                <Typography style={{width: barLabelWidth}}>JQuery</Typography>
+                            </Grid>
+                            <Grid item xs={6} >
+                                <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={60} />
+                            </Grid>
+                        </div>
+                        
 
-                    <div className={this.props.classes.bloc}>
-                        <Grid item xs={12}>
-                            <Typography style={{width: barLabelWidth}}>Maven</Typography>
-                        </Grid>
-                        <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={60} />
-                        </Grid>
-                    </div>
-                    
+                        <div className={this.props.classes.bloc}>
+                            <Grid item xs={12}>
+                                <Typography style={{width: barLabelWidth}}>Maven</Typography>
+                            </Grid>
+                            <Grid item xs={6} >
+                                <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={60} />
+                            </Grid>
+                        </div>
+                        
 
-                    <div className={this.props.classes.bloc}>
-                        <Grid item xs={12}>
-                            <Typography style={{width: barLabelWidth}}>Hibernate</Typography>
-                        </Grid>
-                        <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={60} />
-                        </Grid>
-                    </div>
-                    
-                    
-                    <div className={this.props.classes.bloc}>
-                        <Grid item xs={12}>
-                            <Typography style={{width: barLabelWidth}}>PostGreSql</Typography>
-                        </Grid>
-                        <Grid item xs={6} >
-                            <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={70} />
-                        </Grid>
-                    </div>
-                    
+                        <div className={this.props.classes.bloc}>
+                            <Grid item xs={12}>
+                                <Typography style={{width: barLabelWidth}}>Hibernate</Typography>
+                            </Grid>
+                            <Grid item xs={6} >
+                                <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={60} />
+                            </Grid>
+                        </div>
+                        
+                        
+                        <div className={this.props.classes.bloc}>
+                            <Grid item xs={12}>
+                                <Typography style={{width: barLabelWidth}}>PostGreSql</Typography>
+                            </Grid>
+                            <Grid item xs={6} >
+                                <LinearProgress className={this.props.classes.barProgress} style={{width: this.state.widthBar,marginLeft: marginBar}} variant="determinate" value={70} />
+                            </Grid>
+                        </div>
+                        
 
 
-                </Grid>
+                    </Grid>
+                </Slide>
 
             </div>      
         

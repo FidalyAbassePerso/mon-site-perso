@@ -63,7 +63,7 @@ class NavigationPanel extends React.Component {
                 <Paper style={{height: heightPaper}} className = {this.props.classes.paper}>
                     <MenuList className = {this.props.classes.menu}>
                         <center><Avatar alt="Abasse FIDALY" src={abasse} className={this.props.classes.avatar} /></center>
-                        <MenuItem onClick={this.handleMenuChange}>Acceuil</MenuItem>
+                        <MenuItem onClick={this.handleMenuChange}>Accueil</MenuItem>
                         <MenuItem onClick={this.handleMenuChange}>Mes compétences</MenuItem>
                         <MenuItem onClick={this.handleMenuChange}>Mes expériences professionnel</MenuItem>
                         <MenuItem onClick={this.handleMenuChange}>Mes réalisations</MenuItem>

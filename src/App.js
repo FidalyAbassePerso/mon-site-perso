@@ -55,7 +55,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Grid container>
-          {window.innerWidth < 1172 ? (
+          {window.innerWidth < 1172 | window.innerHeight < 539? (
             <NavigationBar onMenuSelect={this.handleMenuSelected}/>
           ) : (
             <NavigationPanel isOnHeightHundredPercent={this.state.menuExperiencePro} onMenuSelect={this.handleMenuSelected}/>
